@@ -25,15 +25,15 @@
 
 inlined the font and style css file and put 'async' tag on google analytics js file. 
 Used Grunt's tools for 
- -Image Minification
- -CSS & Javascript inline includes & minification
- -HTML Minification
+ - Image Minification
+ - CSS & Javascript inline includes & minification
+ - HTML Minification
 used online jpeg compression tools for pizzeria.jpg cause grunt met an error said: 'write an EOF to file'
 
 ###Part 2: Optimize Frames per Second in pizza.html
 
--Moved DOM queries out of loops in several places
--Used document.getElementsByClassName() and getElementByID() to replaced document.querySelectorAll().
--In updatePositions function, moved 'items' variable out of function. 
--Used transform trandlated3d and backface-visibility hidden to make then have their own seperate layers.
--Dynamic calulated the number of moving pizza according to the availwidth & availheight
+- Moved DOM queries out of loops in several places
+- Used document.getElementsByClassName() and getElementByID() to replaced document.querySelectorAll().
+- In updatePositions function, moved 'items' variable out of function. 
+- Used transform trandlated3d and backface-visibility hidden to make then have their own seperate layers.
+- Dynamic calulated the number of moving pizza according to the availwidth & availheight
