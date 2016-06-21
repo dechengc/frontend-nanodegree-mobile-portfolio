@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             target: {
                 files: {
                     'dist/css/print.css': 'css/print.css',
-                    'dist/css/style.css': 'css/style.css',
+
                     'dist/views/css/style.css': 'views/css/style.css',
                     'dist/views/css/bootstrap-grid.css': 'views/css/bootstrap-grid.css'
                 }
@@ -57,33 +57,23 @@ module.exports = function(grunt) {
                     cwd: 'img',
                     src: ['**/*.{png,jpg,gif}'],
                     dest: 'dist/img/'
+                },
+                {
+                    expand: true,
+                    cwd: 'views/images',
+                    src: '**/*.png',
+                    dest: 'dist/views/images/'
                 }]
             }
         },
-        // responsive_images: {
-        //   dev: {
-        //     options: {
-        //       engine: 'im',
-        //       sizes: [{
-        //         width: 400,
-        //         quality: 50
-        //       }]
-        //     },
-        //     files: [{
-        //         expand: true,
-        //         cwd: 'views/images',
-        //         src: ['**/*.{png,jpg,gif}'],
-        //         dest: 'dist/views/images/'
-        //     }]
-        //   }
-        // }
+
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    // grunt.loadNpmTasks('grunt-responsive-images');
+
     grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin', 'imagemin']);
 
 };
