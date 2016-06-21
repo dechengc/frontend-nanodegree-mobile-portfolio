@@ -66,6 +66,24 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        responsive_images: {
+          dev: {
+            options: {
+
+              sizes: [{
+                width: 10,
+                rename:false,
+                quality: 2
+              }]
+            },
+            files: [{
+                expand: true,
+                cwd: 'views/images',
+                src: '**/*.jpg',
+                dest: 'dist/views/images/'
+            }]
+          }
+        },
 
     });
 
@@ -73,7 +91,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-
-    grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin', 'imagemin']);
+    grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin', 'imagemin', 'responsive_images']);
 
 };
