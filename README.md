@@ -24,10 +24,12 @@
 ###Part 1: Optimize PageSpeed Insights score for index.html
 
 inlined the font and style css file and put 'async' tag on google analytics js file. 
+
 Used Grunt's tools for 
  - Image Minification
  - CSS & Javascript inline includes & minification
  - HTML Minification
+
 used online jpeg compression tools for pizzeria.jpg cause grunt met an error said: 'write an EOF to file'
 
 ###Part 2: Optimize Frames per Second in pizza.html
